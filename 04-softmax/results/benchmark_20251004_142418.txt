@@ -1,0 +1,188 @@
+CUDA Softmax Optimization Benchmark Results
+Generated: Sat Oct  4 14:24:18 EDT 2025
+GPU: NVIDIA GeForce RTX 4080
+
+================================
+Test: Small Test (Verification)
+Size: 128x100, Iterations: 10
+================================
+=== Softmax Optimization Benchmark ===
+Problem size: 128 x 100
+Iterations: 10
+
+Computing CPU reference...
+CPU reference computed.
+
+Running benchmarks...
+
+Naive Softmax            : 0.0207 ms (avg over 10 runs) - PASSED
+Coalesced Memory         : 0.0151 ms (avg over 10 runs) - PASSED
+Optimized Block Reduce   : 0.0045 ms (avg over 10 runs) - PASSED
+Online Softmax           : 0.0047 ms (avg over 10 runs) - PASSED
+
+=== Benchmark Complete ===
+
+================================
+Test: Medium - Batch 256, 1K classes
+Size: 256x1000, Iterations: 100
+================================
+=== Softmax Optimization Benchmark ===
+Problem size: 256 x 1000
+Iterations: 100
+
+Computing CPU reference...
+CPU reference computed.
+
+Running benchmarks...
+
+Naive Softmax            : 0.3327 ms (avg over 100 runs) - PASSED
+Coalesced Memory         : 0.0076 ms (avg over 100 runs) - PASSED
+Optimized Block Reduce   : 0.0105 ms (avg over 100 runs) - PASSED
+Online Softmax           : 0.0127 ms (avg over 100 runs) - PASSED
+
+=== Benchmark Complete ===
+
+================================
+Test: Medium - Batch 512, 1K classes
+Size: 512x1000, Iterations: 100
+================================
+=== Softmax Optimization Benchmark ===
+Problem size: 512 x 1000
+Iterations: 100
+
+Computing CPU reference...
+CPU reference computed.
+
+Running benchmarks...
+
+Naive Softmax            : 0.3323 ms (avg over 100 runs) - PASSED
+Coalesced Memory         : 0.0159 ms (avg over 100 runs) - PASSED
+Optimized Block Reduce   : 0.0152 ms (avg over 100 runs) - PASSED
+Online Softmax           : 0.0149 ms (avg over 100 runs) - PASSED
+
+=== Benchmark Complete ===
+
+================================
+Test: Medium - Batch 1024, 1K classes
+Size: 1024x1000, Iterations: 100
+================================
+=== Softmax Optimization Benchmark ===
+Problem size: 1024 x 1000
+Iterations: 100
+
+Computing CPU reference...
+CPU reference computed.
+
+Running benchmarks...
+
+Naive Softmax            : 0.3384 ms (avg over 100 runs) - PASSED
+Coalesced Memory         : 0.0160 ms (avg over 100 runs) - PASSED
+Optimized Block Reduce   : 0.0163 ms (avg over 100 runs) - PASSED
+Online Softmax           : 0.0250 ms (avg over 100 runs) - PASSED
+
+=== Benchmark Complete ===
+
+================================
+Test: Large Features - Batch 256, 4K features
+Size: 256x4096, Iterations: 100
+================================
+=== Softmax Optimization Benchmark ===
+Problem size: 256 x 4096
+Iterations: 100
+
+Computing CPU reference...
+CPU reference computed.
+
+Running benchmarks...
+
+Naive Softmax            : 1.8277 ms (avg over 100 runs) - PASSED
+Coalesced Memory         : 0.0268 ms (avg over 100 runs) - PASSED
+Optimized Block Reduce   : 0.0207 ms (avg over 100 runs) - PASSED
+Online Softmax           : 0.0180 ms (avg over 100 runs) - PASSED
+
+=== Benchmark Complete ===
+
+================================
+Test: Large Features - Batch 512, 4K features
+Size: 512x4096, Iterations: 100
+================================
+=== Softmax Optimization Benchmark ===
+Problem size: 512 x 4096
+Iterations: 100
+
+Computing CPU reference...
+CPU reference computed.
+
+Running benchmarks...
+
+Naive Softmax            : 1.7085 ms (avg over 100 runs) - PASSED
+Coalesced Memory         : 0.0157 ms (avg over 100 runs) - PASSED
+Optimized Block Reduce   : 0.0169 ms (avg over 100 runs) - PASSED
+Online Softmax           : 0.0168 ms (avg over 100 runs) - PASSED
+
+=== Benchmark Complete ===
+
+================================
+Test: Large Batch - Batch 2K, 1K classes
+Size: 2048x1000, Iterations: 100
+================================
+=== Softmax Optimization Benchmark ===
+Problem size: 2048 x 1000
+Iterations: 100
+
+Computing CPU reference...
+CPU reference computed.
+
+Running benchmarks...
+
+Naive Softmax            : 0.3137 ms (avg over 100 runs) - PASSED
+Coalesced Memory         : 0.0218 ms (avg over 100 runs) - PASSED
+Optimized Block Reduce   : 0.0198 ms (avg over 100 runs) - PASSED
+Online Softmax           : 0.0175 ms (avg over 100 runs) - PASSED
+
+=== Benchmark Complete ===
+
+================================
+Test: Large Batch - Batch 4K, 1K classes
+Size: 4096x1000, Iterations: 50
+================================
+=== Softmax Optimization Benchmark ===
+Problem size: 4096 x 1000
+Iterations: 50
+
+Computing CPU reference...
+CPU reference computed.
+
+Running benchmarks...
+
+Naive Softmax            : 0.3151 ms (avg over 50 runs) - PASSED
+Coalesced Memory         : 0.0355 ms (avg over 50 runs) - PASSED
+Optimized Block Reduce   : 0.0242 ms (avg over 50 runs) - PASSED
+Online Softmax           : 0.0264 ms (avg over 50 runs) - PASSED
+
+=== Benchmark Complete ===
+
+================================
+Test: Stress Test - 4Kx4K
+Size: 4096x4096, Iterations: 10
+================================
+=== Softmax Optimization Benchmark ===
+Problem size: 4096 x 4096
+Iterations: 10
+
+Computing CPU reference...
+CPU reference computed.
+
+Running benchmarks...
+
+Naive Softmax            : 1.7112 ms (avg over 10 runs) - PASSED
+Coalesced Memory         : 0.2190 ms (avg over 10 runs) - PASSED
+Optimized Block Reduce   : 0.2201 ms (avg over 10 runs) - PASSED
+Online Softmax           : 0.2190 ms (avg over 10 runs) - PASSED
+
+=== Benchmark Complete ===
+
+================================
+Benchmark Complete!
+Results saved to: results/benchmark_20251004_142418.txt
+================================
